@@ -21,13 +21,32 @@
             <h1><img src="imagenes/logo.png" al alt="Logo Alura"></h1>
         </div>
 
-        <div class="start">
-            <input type="image" src="Imagenes/ButtonStart.png" id="start" value="Start" >
+        <div class="start"  id="start">
+            <input type="image" src="Imagenes/ButtonStart.png"  id="start" value="Start" />
         </div>
 
-        <div class="add">
+        <div class="add" id="add">
             <input type="image" src="Imagenes/ButtonAdd.png" id="add" value="Add"  >
         </div>
 
     </main>
 </html>
+
+<script>
+
+    function imgDisplay(){
+        document.getElementById("start").style.display = "none";
+        document.getElementById("add").style.display = "none";
+    }
+
+    function start(){
+        imgDisplay();
+    }
+
+
+    //hago la variable btn que es la de encrip
+    var btnStart = document.getElementById("start");
+    //al hacer click llama a getText
+    btnStart.onclick = start;
+
+</script>
