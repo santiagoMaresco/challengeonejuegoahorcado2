@@ -16,3 +16,22 @@
     bottom: 0%;
 
 }
+
+.start{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 317px;
+    height: 114px;
+    left: 561px;
+    top: 402px;
+
+    /* Dark blue/dark-blue-300 */
+
+    background: #0A3871;
+    border-radius: 24px;
+}
