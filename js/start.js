@@ -4,8 +4,14 @@ function imgDisplay(){
         document.getElementById("add").style.display = "none";
     }
 
+function visualizarNewGameLeave(){
+    btDesistir.classList.remove("invisible");
+    btNuevoJuego.classList.remove("invisible");
+}
+
 function start(){
     imgDisplay();
+    visualizarNewGameLeave();
     crearTablero();
 }
 
