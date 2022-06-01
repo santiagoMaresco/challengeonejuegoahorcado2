@@ -7,6 +7,7 @@ function imgDisplay(){
 function visualizarNewGameLeave(){
     btDesistir.classList.remove("invisible");
     btNuevoJuego.classList.remove("invisible");
+    btDesistir2.classList.remove("invisible");
 }
 
 function start(){
@@ -22,6 +23,8 @@ function start(){
     btDesistir.classList.add("invisible");
     var btNuevoJuego = document.querySelector(".new-game")
     btNuevoJuego.classList.add("invisible");
+    var btDesistir2 = document.querySelector(".imagenAhorcado")
+    btDesistir2.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
