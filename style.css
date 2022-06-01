@@ -64,9 +64,19 @@
 position: absolute;
 width: 200px;
 height: 67px;
-left: 300px;
+left: 350px;
 top: 900px;
 
 background: #0A3871;
 border-radius: 24px;
 }
+
+.leave{
+    position: absolute;
+    width: 200px;
+    height: 67px;
+    left: 750px;
+    top: 900px;
+    border-radius: 24px;
+    }
+
