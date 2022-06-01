@@ -9,7 +9,10 @@ function start(){
     crearTablero();
 }
 
-
+    var btDesistir = document.querySelector(".leave")
+    btDesistir.classList.add("invisible");
+    var btNuevoJuego = document.querySelector(".new-game")
+    btNuevoJuego.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
