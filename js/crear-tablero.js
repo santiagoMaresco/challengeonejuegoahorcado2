@@ -1,4 +1,3 @@
-
-    function crearTablero(){
+function crearTablero(){
         
-    }
+}
