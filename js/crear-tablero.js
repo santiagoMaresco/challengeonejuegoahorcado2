@@ -1,3 +1,8 @@
+function sortearPalabra(palabras){
+    var pos = Math.floor(Math.random()*(palabras.length));
+    return palabras[pos];
+}
+
 function crearTablero(){
-    console.log("Se creo");
+    palabraActual = sortearPalabra(palabras);
 }

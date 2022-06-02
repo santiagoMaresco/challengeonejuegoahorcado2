@@ -18,6 +18,8 @@ function start(){
     //al hacer click llama a getText
     btnNewGame.onclick = crearTablero;
 }
+    var palabraActual;
+    var palabras = ["ALURA", "ORACLE", "SANTIAGO"];
 
     var btDesistir = document.querySelector(".leave")
     btDesistir.classList.add("invisible");
