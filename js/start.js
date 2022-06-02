@@ -22,7 +22,7 @@ function start(){
 
 }
     var palabraActual;
-    var palabras = ["ALURA", "ORACLE", "SANTIAGO"];
+    var palabras = ["ALURA", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
 
     var btDesistir = document.querySelector(".leave")
     btDesistir.classList.add("invisible");
