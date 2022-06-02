@@ -60,10 +60,10 @@ function verificarLetra (letra){
 
 function verificarLetraDentroDePalabra(letra,palabraActual){
     console.log(letra + palabraActual);
+    return palabraActual.includes(letra); 
 }
 
 function crearTablero(){
-    //var flag;
     var tablero = document.querySelector(".tablero");
     var pincel = tablero.getContext("2d"); 
     pincel.clearRect(0, 0, tablero.width, tablero.height);
@@ -74,7 +74,9 @@ function crearTablero(){
         var letra = event.key;
         
         if (verificarLetra(letra)) {
-            verificarLetraDentroDePalabra(letra,palabraActual);
+            //dibujar letra correcta
+        } else {
+            //dibujar letra incorrecta
         }
         
     }, false);
