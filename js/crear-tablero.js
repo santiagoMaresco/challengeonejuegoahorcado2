@@ -16,8 +16,8 @@ function dibujarLinea(pincel,x,y){
 
 function escribirPalabra(ctx,palabra){
     ctx.font = "15px Arial";
-ctx.strokeStyle = "#0A3871";
-ctx.strokeText(palabra, 10, 50);
+    ctx.strokeStyle = "#0A3871";
+    ctx.strokeText(palabra, 10, 50);
 }
 
 function generarLineas(palabra,tablero,pincel){
@@ -41,6 +41,24 @@ function generarLineas(palabra,tablero,pincel){
     }
 }
 
+
+function esEspecial(tecla) {
+    var soloMayusculas = /^[A-Z]+$/;
+    if (tecla.match(soloMayusculas) == null){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function accionarTecla (letra){
+    if (esEspecial(letra)){
+        alert("Ingrese solo letras y en mayusculas");
+    } else {
+        console.log(letra);
+    }
+}
+
 function crearTablero(){
     var tablero = document.querySelector(".tablero");
     var pincel = tablero.getContext("2d"); 
@@ -48,4 +66,9 @@ function crearTablero(){
     palabraActual = sortearPalabra(palabras);
                                         console.log(palabraActual);
     generarLineas(palabraActual,tablero,pincel);
+    document.addEventListener('keypress', (event) => {
+        var letra = event.key;
+        accionarTecla(letra);
+    }, false);
+      
 }
