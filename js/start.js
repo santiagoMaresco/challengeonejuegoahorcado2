@@ -13,10 +13,13 @@ function visualizarNewGameLeave(){
 function start(){
     imgDisplay();
     visualizarNewGameLeave();
+    crearTablero();
+
     //hago la variable btn para nuevo juego
     var btnNewGame = document.getElementById("new-game");
     //al hacer click llama a getText
     btnNewGame.onclick = crearTablero;
+
 }
     var palabraActual;
     var palabras = ["ALURA", "ORACLE", "SANTIAGO"];
@@ -32,3 +35,4 @@ function start(){
     var btnStart = document.getElementById("start");
     //al hacer click llama a getText
     btnStart.onclick = start;
+
