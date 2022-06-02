@@ -4,8 +4,6 @@ function sortearPalabra(palabras){
 }
 
 function dibujarLinea(pincel,x,y){
-    //pincel.fillStyle = "blue";
-    //pincel.fillRect(x,y,10,1);
     pincel.lineWidth=4;
     pincel.strokeStyle="#0A3871";
     pincel.beginPath();
@@ -51,15 +49,21 @@ function esEspecial(tecla) {
     }
 }
 
-function accionarTecla (letra){
+function verificarLetra (letra){
     if (esEspecial(letra)){
         alert("Ingrese solo letras y en mayusculas");
+        return false;
     } else {
-        console.log(letra);
+        return true;
     }
 }
 
+function verificarLetraDentroDePalabra(letra,palabraActual){
+    console.log(letra + palabraActual);
+}
+
 function crearTablero(){
+    //var flag;
     var tablero = document.querySelector(".tablero");
     var pincel = tablero.getContext("2d"); 
     pincel.clearRect(0, 0, tablero.width, tablero.height);
@@ -68,7 +72,10 @@ function crearTablero(){
     generarLineas(palabraActual,tablero,pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
-        accionarTecla(letra);
+        
+        if (verificarLetra(letra)) {
+            verificarLetraDentroDePalabra(letra,palabraActual);
+        }
+        
     }, false);
-      
 }
