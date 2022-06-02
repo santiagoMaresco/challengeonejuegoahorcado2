@@ -23,7 +23,7 @@ function start(){
     btDesistir.classList.add("invisible");
     var btNuevoJuego = document.querySelector(".new-game")
     btNuevoJuego.classList.add("invisible");
-    var btDesistir2 = document.querySelector(".imagenAhorcado")
+    var btDesistir2 = document.querySelector(".tablero");
     btDesistir2.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
