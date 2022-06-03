@@ -7,9 +7,9 @@ function dibujarLinea(pincel,x,y){
     pincel.stroke();
 }
 
-function dibujarLetra (pincel,letra,tipo,x,y){
+function dibujarLetra (pincel,letra,tipo,color,x,y){
     pincel.font = tipo;
-    pincel.strokeStyle = "#0A3871";
+    pincel.strokeStyle = color;
     if(letra != "I"){
         pincel.strokeText(letra, x , y );
     } else {
@@ -21,7 +21,7 @@ function dibujarLetraCorrecta(pincel,letra){
     var i = 0;
     while(i<tamaño){
         if(letra == palabraActual[i]){
-            dibujarLetra(pincel, letra,"50px Arial", posiciones[i] + (anchoTablero * 0.005),
+            dibujarLetra(pincel, letra,"50px Arial", "#0A3871", posiciones[i] + (anchoTablero * 0.005),
                 (altoTablero-altoTablero/6) - (altoTablero * 0.01));
         }
         i++;
@@ -29,7 +29,7 @@ function dibujarLetraCorrecta(pincel,letra){
 }
 
 function dibujarLetraincorrecta(pincel,letra){
-    dibujarLetra(pincel, letra,"30px Arial",posicionesErroneas[nroErrores] ,
+    dibujarLetra(pincel, letra,"30px Arial","#0A3871",posicionesErroneas[nroErrores] ,
     (altoTablero-altoTablero/16) - (altoTablero * 0.01) );
     nroErrores++;
 }
@@ -58,4 +58,8 @@ function generarLineas(tablero,pincel){
         posiciones[i+1] = posiciones[i] + posiciones[0]; 
         i++;
     }
+}
+
+function dibujarFinDeJuego(pincel){
+    dibujarLetra(pincel,"Fin del juego!","40px Arial", "red", (anchoTablero/2 + anchoTablero /8), (altoTablero / 2));
 }

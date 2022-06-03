@@ -40,7 +40,7 @@ function crearTablero(){
     generarLineas(tablero,pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
-        
+        if(!fin){
         if (verificarLetra(letra)) {
             if(!fueUsada(letra)){
                 letrasUsadas.push(letra);
@@ -48,9 +48,17 @@ function crearTablero(){
                     dibujarLetraCorrecta(pincel,letra);
                 } else {
                     dibujarLetraincorrecta(pincel,letra);
+                    letrasIncorrectas.push(letra)
+                    if(letrasIncorrectas.length == 7){
+                        fin = true;
+                        dibujarFinDeJuego(pincel);
+                    }
                 }
             }
         } 
+    } else {
+        alert("Fin del juego");
+    }
         
     }, false);
 }

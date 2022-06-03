@@ -36,6 +36,7 @@ function cargarPosicionesErroneas(){
     var posiciones = [];
     var posicionesErroneas = []
     var letrasUsadas = [];
+    var letrasIncorrectas = [];
     var nroErrores = 0;
     var anchoTablero;
     var altoTablero;
