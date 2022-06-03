@@ -8,7 +8,6 @@ function dibujarLinea(pincel,x,y){
 }
 
 function dibujarLetra (pincel,letra,tipo,x,y){
-    console.log(x);
     pincel.font = tipo;
     pincel.strokeStyle = "#0A3871";
     if(letra != "I"){
@@ -32,7 +31,6 @@ function dibujarLetraCorrecta(pincel,letra){
 function dibujarLetraincorrecta(pincel,letra){
     dibujarLetra(pincel, letra,"30px Arial",posicionesErroneas[nroErrores] ,
     (altoTablero-altoTablero/16) - (altoTablero * 0.01) );
-    console.log(nroErrores);
     nroErrores++;
 }
 

@@ -26,14 +26,13 @@ function cargarPosicionesErroneas(){
     var i = 1;
     posicionesErroneas[0] = (anchoTablero / 2) - (anchoTablero /4)
     while(i<7){
-        console.log(posicionesErroneas[i])
         posicionesErroneas[i] = posicionesErroneas[i - 1] + anchoTablero / 12;
         i++
     }
 }
 
     var palabraActual;
-    var palabras = ["ALURA", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
+    var palabras = ["SANTINO", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
     var posiciones = [];
     var posicionesErroneas = []
     var nroErrores = 0;
