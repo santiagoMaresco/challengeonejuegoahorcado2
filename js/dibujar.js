@@ -8,6 +8,7 @@ function dibujarLinea(pincel,x,y){
 }
 
 function dibujarLetra (pincel,letra,tipo,x,y){
+    console.log(x);
     pincel.font = tipo;
     pincel.strokeStyle = "#0A3871";
     if(letra != "I"){
@@ -29,9 +30,13 @@ function dibujarLetraCorrecta(pincel,letra){
 }
 
 function dibujarLetraincorrecta(pincel,letra){
-    //dibujarLetra(pincel, letra,"20px Arial",  )
-    console.log("La letra NO esta");
+    dibujarLetra(pincel, letra,"30px Arial",posicionesErroneas[nroErrores] ,
+    (altoTablero-altoTablero/16) - (altoTablero * 0.01) );
+    console.log(nroErrores);
+    nroErrores++;
 }
+
+
 
 function generarLineas(tablero,pincel){
     var i = 0;
@@ -39,6 +44,7 @@ function generarLineas(tablero,pincel){
     //Tomo el ancho del tablero actual
     anchoTablero = tablero.clientWidth;
     altoTablero = tablero.clientHeight;
+    cargarPosicionesErroneas();
 
     //Un if para palabras chicas y grandes
     if (tamaño < 15){
