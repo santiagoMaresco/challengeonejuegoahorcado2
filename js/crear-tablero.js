@@ -12,29 +12,27 @@ function dibujarLinea(pincel,x,y){
     pincel.stroke();
 }
 
-function escribirPalabra(ctx,palabra){
-    ctx.font = "15px Arial";
-    ctx.strokeStyle = "#0A3871";
-    ctx.strokeText(palabra, 10, 50);
+function escribirLetra(pincel,letra){
+    pincel.font = "15px Arial";
+    pincel.strokeStyle = "#0A3871";
+    pincel.strokeText(letra, 10, 50);
 }
 
-function generarLineas(palabra,tablero,pincel){
+function generarLineas(tablero,pincel){
     var i = 0;
-    var tamaño = palabra.length;
+    var tamaño = palabraActual.length;
     console.log(tamaño);
     //Tomo el ancho del tablero actual
     
     var anchoTablero = tablero.clientWidth;
     var altoTablero = tablero.clientHeight;
       
-    var posicionInicial = anchoTablero/tamaño; 
-    var posicion = posicionInicial;
+    posiciones[0] = anchoTablero/tamaño; 
+    var posicion = posiciones[0];
 
     while(i < tamaño){
         dibujarLinea(pincel,posicion,(altoTablero-altoTablero/6));
-        //escribirPalabra(pincel,tablero,palabra);
-        console.log(posicion);
-        posicion = posicion + posicionInicial;
+        posicion = posicion + posiciones[0];
         i++;
     }
 }
@@ -69,15 +67,19 @@ function crearTablero(){
     pincel.clearRect(0, 0, tablero.width, tablero.height);
     palabraActual = sortearPalabra(palabras);
                                         console.log(palabraActual);
-    generarLineas(palabraActual,tablero,pincel);
+    generarLineas(tablero,pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
         
         if (verificarLetra(letra)) {
-            //dibujar letra correcta
-        } else {
-            //dibujar letra incorrecta
-        }
+            if(verificarLetraDentroDePalabra(letra,palabraActual)){
+                console.log("La letra esta");
+                //escribirLetra(pincel,tablero,letra);
+                //dibujar letra correcta
+            } else {
+                console.log("La letra NO esta");
+            }
+        } 
         
     }, false);
 }
