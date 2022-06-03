@@ -26,13 +26,19 @@ function generarLineas(tablero,pincel){
     
     var anchoTablero = tablero.clientWidth;
     var altoTablero = tablero.clientHeight;
-      
-    posiciones[0] = anchoTablero/tamaño; 
-    var posicion = posiciones[0];
+    
+    if (tamaño < 15){
+        posiciones[i] = ((anchoTablero * 0.9)/tamaño )- ((anchoTablero * 0.1) /tamaño) ; 
+    } else{
+        posiciones[i] = ((anchoTablero * 0.9)/tamaño )
+    }
 
     while(i < tamaño){
-        dibujarLinea(pincel,posicion,(altoTablero-altoTablero/6));
-        posicion = posicion + posiciones[0];
+        dibujarLinea(pincel,posiciones[i],(altoTablero-altoTablero/6));
+        console.log(posiciones);
+        console.log(i);
+        posiciones[i+1] = posiciones[i] + posiciones[0];
+        
         i++;
     }
 }
