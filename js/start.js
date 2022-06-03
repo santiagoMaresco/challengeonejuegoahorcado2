@@ -21,12 +21,20 @@ function start(){
     btnNewGame.onclick = crearTablero;
 
 }
+
+function cargarPosicionesErroneas(posicones){
+    
+}
     var palabraActual;
     var palabras = ["ALURA", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
     var posiciones = [];
+    var posicionesErroneas = []
+    var nroErrores = 0;
     var anchoTablero;
     var altoTablero;
     var tamaño = 0;
+
+    cargarPosicionesErroneas(posicionesErroneas);
 
     var btDesistir = document.querySelector(".leave")
     btDesistir.classList.add("invisible");

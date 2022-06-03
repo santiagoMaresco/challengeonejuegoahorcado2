@@ -7,25 +7,29 @@ function dibujarLinea(pincel,x,y){
     pincel.stroke();
 }
 
-function dibujarLetra (pincel,letra,x,y){
-    pincel.font = "50px Arial";
+function dibujarLetra (pincel,letra,tipo,x,y){
+    pincel.font = tipo;
     pincel.strokeStyle = "#0A3871";
-    pincel.strokeText(letra, x , y );
+    if(letra != "I"){
+        pincel.strokeText(letra, x , y );
+    } else {
+        pincel.strokeText(letra, x + (anchoTablero * 0.01) , y );
+    }
 }
 
 function dibujarLetraCorrecta(pincel,letra){
     var i = 0;
     while(i<tamaño){
         if(letra == palabraActual[i]){
-            dibujarLetra(pincel, letra, posiciones[i] + (anchoTablero * 0.005),
+            dibujarLetra(pincel, letra,"50px Arial", posiciones[i] + (anchoTablero * 0.005),
                 (altoTablero-altoTablero/6) - (altoTablero * 0.01));
         }
         i++;
     };
 }
 
-function dibujarLetraincorrecta(pincel,tablero,letra){
-    
+function dibujarLetraincorrecta(pincel,letra){
+    //dibujarLetra(pincel, letra,"20px Arial",  )
     console.log("La letra NO esta");
 }
 
