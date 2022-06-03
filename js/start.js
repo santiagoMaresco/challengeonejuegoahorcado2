@@ -35,10 +35,13 @@ function cargarPosicionesErroneas(){
     var palabras = ["SANTINO", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
     var posiciones = [];
     var posicionesErroneas = []
+    var letrasUsadas = [];
     var nroErrores = 0;
     var anchoTablero;
     var altoTablero;
     var tamaño = 0;
+    var gano;
+    var fin;
 
     var btDesistir = document.querySelector(".leave")
     btDesistir.classList.add("invisible");

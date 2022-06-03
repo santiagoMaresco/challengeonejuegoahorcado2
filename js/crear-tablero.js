@@ -23,8 +23,12 @@ function verificarLetra (letra){
 }
 
 function verificarLetraDentroDePalabra(letra,palabraActual){
-    console.log(letra + palabraActual);
+    console.log(palabraActual);
     return palabraActual.includes(letra); 
+}
+
+function fueUsada(letra){
+    return letrasUsadas.includes(letra);
 }
 
 function crearTablero(){
@@ -38,10 +42,13 @@ function crearTablero(){
         var letra = event.key;
         
         if (verificarLetra(letra)) {
-            if(verificarLetraDentroDePalabra(letra,palabraActual)){
-                dibujarLetraCorrecta(pincel,letra);
-            } else {
-                dibujarLetraincorrecta(pincel,letra);
+            if(!fueUsada(letra)){
+                letrasUsadas.push(letra);
+                if(verificarLetraDentroDePalabra(letra,palabraActual)){
+                    dibujarLetraCorrecta(pincel,letra);
+                } else {
+                    dibujarLetraincorrecta(pincel,letra);
+                }
             }
         } 
         
