@@ -39,9 +39,9 @@ function crearTablero(){
         
         if (verificarLetra(letra)) {
             if(verificarLetraDentroDePalabra(letra,palabraActual)){
-                dibujarLetraCorrecta(pincel,tablero,letra);
+                dibujarLetraCorrecta(pincel,letra);
             } else {
-                dibujarLetraincorrecta(pincel,tablero,letra);
+                dibujarLetraincorrecta(pincel,letra);
             }
         } 
         

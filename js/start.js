@@ -24,6 +24,7 @@ function start(){
     var palabraActual;
     var palabras = ["ALURA", "ORACLE", "SANTIAGO", "OTORRINOLARINGOLOGIA"];
     var posiciones = [];
+    var anchoTablero;
     var altoTablero;
     var tamaño = 0;
 

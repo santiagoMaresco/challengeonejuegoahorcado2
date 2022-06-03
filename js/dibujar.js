@@ -7,15 +7,21 @@ function dibujarLinea(pincel,x,y){
     pincel.stroke();
 }
 
-function dibujarLetra (pincel,x,y){
-    pincel.font = "15px Arial";
+function dibujarLetra (pincel,letra,x,y){
+    pincel.font = "50px Arial";
     pincel.strokeStyle = "#0A3871";
-    pincel.strokeText(letra, x, y);
+    pincel.strokeText(letra, x , y );
 }
 
-function dibujarLetraCorrecta(pincel,tablero,letra){
-    console.log("La letra esta");
- 
+function dibujarLetraCorrecta(pincel,letra){
+    var i = 0;
+    while(i<tamaño){
+        if(letra == palabraActual[i]){
+            dibujarLetra(pincel, letra, posiciones[i] + (anchoTablero * 0.005),
+                (altoTablero-altoTablero/6) - (altoTablero * 0.01));
+        }
+        i++;
+    };
 }
 
 function dibujarLetraincorrecta(pincel,tablero,letra){
@@ -27,7 +33,7 @@ function generarLineas(tablero,pincel){
     var i = 0;
     tamaño = palabraActual.length;
     //Tomo el ancho del tablero actual
-    var anchoTablero = tablero.clientWidth;
+    anchoTablero = tablero.clientWidth;
     altoTablero = tablero.clientHeight;
 
     //Un if para palabras chicas y grandes
