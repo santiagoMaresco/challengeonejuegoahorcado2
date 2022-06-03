@@ -7,22 +7,33 @@ function dibujarLinea(pincel,x,y){
     pincel.stroke();
 }
 
-function escribirLetra(pincel,letra){
+function dibujarLetra (pincel,x,y){
     pincel.font = "15px Arial";
     pincel.strokeStyle = "#0A3871";
-    pincel.strokeText(letra, 10, 50);
+    pincel.strokeText(letra, x, y);
+}
+
+function dibujarLetraCorrecta(pincel,tablero,letra){
+    console.log("La letra esta");
+ 
+}
+
+function dibujarLetraincorrecta(pincel,tablero,letra){
+    
+    console.log("La letra NO esta");
 }
 
 function generarLineas(tablero,pincel){
     var i = 0;
     var tamaño = palabraActual.length;
-    console.log(tamaño);
     //Tomo el ancho del tablero actual
     
     var anchoTablero = tablero.clientWidth;
     var altoTablero = tablero.clientHeight;
-    
+
+    //Un if para palabras chicas y grandes
     if (tamaño < 15){
+        //Pongo en posiciones[0] donde va a comenzar mi primer letra
         posiciones[i] = ((anchoTablero * 0.9)/tamaño )- ((anchoTablero * 0.1) /tamaño) ; 
     } else{
         posiciones[i] = ((anchoTablero * 0.9)/tamaño )
@@ -30,10 +41,8 @@ function generarLineas(tablero,pincel){
 
     while(i < tamaño){
         dibujarLinea(pincel,posiciones[i],(altoTablero-altoTablero/6));
-        console.log(posiciones);
-        console.log(i);
-        posiciones[i+1] = posiciones[i] + posiciones[0];
-        
+        //Voy agregando las posiciones de todos los guiones
+        posiciones[i+1] = posiciones[i] + posiciones[0]; 
         i++;
     }
 }

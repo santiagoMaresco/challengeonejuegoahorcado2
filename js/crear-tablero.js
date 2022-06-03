@@ -39,11 +39,9 @@ function crearTablero(){
         
         if (verificarLetra(letra)) {
             if(verificarLetraDentroDePalabra(letra,palabraActual)){
-                console.log("La letra esta");
-                //dibujarLetraCorrecta(pincel,tablero,letra);
+                dibujarLetraCorrecta(pincel,tablero,letra);
             } else {
-                console.log("La letra NO esta");
-                //dibujarLetraincorrecta(pincel,tablero,letra);
+                dibujarLetraincorrecta(pincel,tablero,letra);
             }
         } 
         
