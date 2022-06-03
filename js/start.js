@@ -37,12 +37,13 @@ function cargarPosicionesErroneas(){
     var posicionesErroneas = []
     var letrasUsadas = [];
     var letrasIncorrectas = [];
+    var letrasCorrectas = [];
     var nroErrores = 0;
     var anchoTablero;
     var altoTablero;
     var tamaño = 0;
-    var gano;
-    var fin;
+    var gano = false;
+    var fin = false;
 
     var btDesistir = document.querySelector(".leave")
     btDesistir.classList.add("invisible");
