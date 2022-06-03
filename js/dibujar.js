@@ -25,11 +25,10 @@ function dibujarLetraincorrecta(pincel,tablero,letra){
 
 function generarLineas(tablero,pincel){
     var i = 0;
-    var tamaño = palabraActual.length;
+    tamaño = palabraActual.length;
     //Tomo el ancho del tablero actual
-    
     var anchoTablero = tablero.clientWidth;
-    var altoTablero = tablero.clientHeight;
+    altoTablero = tablero.clientHeight;
 
     //Un if para palabras chicas y grandes
     if (tamaño < 15){
