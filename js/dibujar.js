@@ -60,6 +60,6 @@ function generarLineas(tablero,pincel){
     }
 }
 
-function dibujarFinDeJuego(pincel){
-    dibujarLetra(pincel,"Fin del juego!","40px Arial", "red", (anchoTablero/2 + anchoTablero /8), (altoTablero / 2));
+function dibujarFinDeJuego(pincel, msj, color){
+    dibujarLetra(pincel, msj,"40px Arial", color, (anchoTablero/2 + anchoTablero /8), (altoTablero / 2));
 }

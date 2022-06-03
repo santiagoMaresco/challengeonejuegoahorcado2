@@ -60,17 +60,16 @@ function crearTablero(){
                     letrasCorrectas.push(letra)
                     if(verificarGanador()){
                         gano = true;
+                        dibujarFinDeJuego(pincel,"Ganaste, felicidades", "green");
                     }
                 } else {
                     dibujarLetraincorrecta(pincel,letra);
                     letrasIncorrectas.push(letra)
                     if(letrasIncorrectas.length == 7){
                         fin = true;
-                        dibujarFinDeJuego(pincel);
+                        dibujarFinDeJuego(pincel,"Fin del juego!", "red");
                     }
                 }
-                
-                console.log("GANO? "+ gano);
             }
         } 
     } else {
