@@ -18,6 +18,8 @@ function start(){
     //hago la variable btn para nuevo juego
     var btnNewGame = document.getElementById("new-game");
     btnNewGame.onclick = crearTablero;
+    var btnDesistir = document.getElementById("leave");
+    btnDesistir.onclick = desistir;
 
 }
 

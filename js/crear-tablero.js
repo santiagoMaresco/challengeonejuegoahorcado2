@@ -90,3 +90,10 @@ function crearTablero(){
         
     }, false);
 }
+
+
+function desistir(){
+    fin = true;
+    var pincel = tablero.getContext("2d"); 
+    
+}
