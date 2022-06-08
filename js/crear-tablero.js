@@ -42,7 +42,18 @@ function verificarGanador(){
     return (letrasCorrectas.length == array2.length);
 }
 
+function resetearVariables(){
+    letrasUsadas = [];
+    letrasIncorrectas = [];
+    letrasCorrectas = [];
+    nroErrores = 0;
+    tamaño = 0;
+    gano = false;
+    fin = false;
+}
+
 function crearTablero(){
+    resetearVariables();
     var pincel = tablero.getContext("2d"); 
     pincel.clearRect(0, 0, tablero.width, tablero.height);
     palabraActual = sortearPalabra(palabras);
@@ -51,6 +62,7 @@ function crearTablero(){
     generarBase(pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
+        console.log(letrasIncorrectas);
         if((!fin)&&(!gano)){
         if (verificarLetra(letra)) {
             if(!fueUsada(letra)){
@@ -74,7 +86,6 @@ function crearTablero(){
             }
         } 
     } else {
-        alert("Fin del juego");
     }
         
     }, false);

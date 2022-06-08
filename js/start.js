@@ -17,7 +17,6 @@ function start(){
 
     //hago la variable btn para nuevo juego
     var btnNewGame = document.getElementById("new-game");
-    //al hacer click llama a getText
     btnNewGame.onclick = crearTablero;
 
 }
