@@ -43,7 +43,6 @@ function verificarGanador(){
 }
 
 function crearTablero(){
-    var tablero = document.querySelector(".tablero");
     var pincel = tablero.getContext("2d"); 
     pincel.clearRect(0, 0, tablero.width, tablero.height);
     palabraActual = sortearPalabra(palabras);

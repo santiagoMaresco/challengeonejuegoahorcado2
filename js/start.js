@@ -49,8 +49,8 @@ function cargarPosicionesErroneas(){
     btDesistir.classList.add("invisible");
     var btNuevoJuego = document.querySelector(".new-game")
     btNuevoJuego.classList.add("invisible");
-    var canvas = document.querySelector(".tablero");
-    canvas.classList.add("invisible");
+    var tablero = document.querySelector(".tablero");
+    tablero.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
