@@ -7,7 +7,7 @@ function imgDisplay(){
 function visualizarNewGameLeave(){
     btDesistir.classList.remove("invisible");
     btNuevoJuego.classList.remove("invisible");
-    btDesistir2.classList.remove("invisible");
+    canvas.classList.remove("invisible");
 }
 
 function start(){
@@ -49,8 +49,8 @@ function cargarPosicionesErroneas(){
     btDesistir.classList.add("invisible");
     var btNuevoJuego = document.querySelector(".new-game")
     btNuevoJuego.classList.add("invisible");
-    var btDesistir2 = document.querySelector(".tablero");
-    btDesistir2.classList.add("invisible");
+    var canvas = document.querySelector(".tablero");
+    canvas.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
