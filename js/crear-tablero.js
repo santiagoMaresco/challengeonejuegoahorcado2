@@ -48,6 +48,7 @@ function crearTablero(){
     palabraActual = sortearPalabra(palabras);
                                         console.log(palabraActual);
     generarLineas(tablero,pincel);
+    generarAhorcado(pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
         if((!fin)&&(!gano)){
