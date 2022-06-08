@@ -1,14 +1,24 @@
-function generarAhorcado(pincel){
+function dibujarAhorcado (pincel){
+    if (letrasIncorrectas.length == 1){
+        generarHorca(pincel);
+    } if (letrasIncorrectas.length == 2){
+        generarCabeza(pincel);
+    } if (letrasIncorrectas.length == 3){
+        generarCuerpo(pincel);
+    } if (letrasIncorrectas.length == 4){
+        generarBrazoIzq(pincel);
+    } if (letrasIncorrectas.length == 5){
+        generarBrazoDer(pincel);
+    } if (letrasIncorrectas.length == 6){
+        generarPieIzq(pincel);
+    } if (letrasIncorrectas.length == 7){
+        generarPieDer(pincel);
+    }
+}
+
+function generarBase(pincel){
     var base = new Image();
     base.src = "Imagenes/base.png";
-
-    generarHorca(pincel);
-    generarCabeza(pincel);
-    generarCuerpo(pincel);
-    generarBrazoIzq(pincel);
-    generarBrazoDer(pincel);
-    generarPieIzq(pincel);
-    generarPieDer(pincel);
 
     base.onload = function (){
         pincel.drawImage(base,428,410);

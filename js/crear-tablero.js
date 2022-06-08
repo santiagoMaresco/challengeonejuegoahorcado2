@@ -48,7 +48,7 @@ function crearTablero(){
     palabraActual = sortearPalabra(palabras);
                                         console.log(palabraActual);
     generarLineas(tablero,pincel);
-    generarAhorcado(pincel);
+    generarBase(pincel);
     document.addEventListener('keypress', (event) => {
         var letra = event.key;
         if((!fin)&&(!gano)){
@@ -65,6 +65,7 @@ function crearTablero(){
                 } else {
                     dibujarLetraincorrecta(pincel,letra);
                     letrasIncorrectas.push(letra)
+                    dibujarAhorcado(pincel);
                     if(letrasIncorrectas.length == 7){
                         fin = true;
                         dibujarFinDeJuego(pincel,"Fin del juego!", "red");

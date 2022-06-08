@@ -19,6 +19,7 @@ function dibujarLetra (pincel,letra,tipo,color,x,y){
 
 function dibujarLetraCorrecta(pincel,letra){
     var i = 0;
+    //While para letras repetidas
     while(i<tamaño){
         if(letra == palabraActual[i]){
             dibujarLetra(pincel, letra,"50px Arial", "#0A3871", posiciones[i] + (anchoTablero * 0.005),
