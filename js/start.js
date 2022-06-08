@@ -7,7 +7,7 @@ function imgDisplay(){
 function visualizarNewGameLeave(){
     btDesistir.classList.remove("invisible");
     btNuevoJuego.classList.remove("invisible");
-    canvas.classList.remove("invisible");
+    tablero.classList.remove("invisible");
 }
 
 function start(){
