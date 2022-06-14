@@ -23,10 +23,35 @@ function start(){
 
 }
 
+function saveStart(){
+    var textarea = document.getElementById('mensaje');
+    palabras.push(textarea.value);
+
+    //Oculto 
+    input.classList.add("invisible");
+    save.classList.add("invisible");
+    cancel.classList.add("invisible");
+
+    //Llamo a start
+    start();
+}
+
+function back(){
+
+}
+
 function add(){
+    //Oculto y muestro 
     imgDisplay();
     input.classList.remove("invisible");
-    console.log("add")
+    save.classList.remove("invisible");
+    cancel.classList.remove("invisible");
+    
+    //Funcionalidad de botones
+    var btnSave = document.getElementById("save");
+    btnSave.onclick = saveStart;
+    var btnCancel = document.getElementById("cancel");
+    btnCancel.onclick = back;
 } 
 
 function cargarPosicionesErroneas(){
@@ -60,6 +85,10 @@ function cargarPosicionesErroneas(){
     tablero.classList.add("invisible");
     var input = document.querySelector(".input");
     input.classList.add("invisible");
+    var save = document.querySelector(".save");
+    save.classList.add("invisible");
+    var cancel = document.querySelector(".cancel");
+    cancel.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
