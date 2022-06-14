@@ -23,6 +23,11 @@ function start(){
 
 }
 
+function add(){
+    imgDisplay();
+    console.log("add")
+} 
+
 function cargarPosicionesErroneas(){
     var i = 1;
     posicionesErroneas[0] = (anchoTablero / 2) - (anchoTablero /4)
@@ -58,3 +63,8 @@ function cargarPosicionesErroneas(){
     //al hacer click llama a getText
     btnStart.onclick = start;
 
+
+    //hago la variable btn que es la de encrip
+    var btnStart = document.getElementById("add");
+    //al hacer click llama a getText
+    btnStart.onclick = add;
