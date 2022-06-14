@@ -37,7 +37,13 @@ function saveStart(){
 }
 
 function back(){
+        //Oculto 
+        input.classList.add("invisible");
+        save.classList.add("invisible");
+        cancel.classList.add("invisible");
 
+        document.getElementById("start").style.display = "flex";
+        document.getElementById("add").style.display = "flex";
 }
 
 function add(){
