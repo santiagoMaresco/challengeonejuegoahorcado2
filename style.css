@@ -90,3 +90,26 @@
 .invisible{
         display:none;
 }
+
+.inputt{
+    display: block;
+    border: none;
+    position: absolute;
+    background: #e4e4e4;
+    width: 557px;
+    height: 300px;
+    left: 400px;
+    top: 168px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 150%;
+/* identical to box height, or 48px */
+
+
+/* Dark blue/dark-blue-300 */
+
+color: #0A3871;
+}
