@@ -25,6 +25,7 @@ function start(){
 
 function add(){
     imgDisplay();
+    input.classList.remove("invisible");
     console.log("add")
 } 
 
@@ -57,6 +58,8 @@ function cargarPosicionesErroneas(){
     btNuevoJuego.classList.add("invisible");
     var tablero = document.querySelector(".tablero");
     tablero.classList.add("invisible");
+    var input = document.querySelector(".input");
+    input.classList.add("invisible");
     
     //hago la variable btn que es la de encrip
     var btnStart = document.getElementById("start");
