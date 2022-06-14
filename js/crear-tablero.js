@@ -95,5 +95,13 @@ function crearTablero(){
 function desistir(){
     fin = true;
     var pincel = tablero.getContext("2d"); 
-    
+    dibujarFinDeJuego(pincel,"Fin del juego!", "red");
+    dibujarCompleto (pincel);
+    var i = 0;
+    //Separo la palabra en un array de sus letras
+    var array = palabraActual.split('')
+    while(i<palabraActual.length){
+        dibujarLetraCorrecta(pincel,array[i]);
+        i++;
+    }
 }

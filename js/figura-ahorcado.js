@@ -16,6 +16,16 @@ function dibujarAhorcado (pincel){
     }
 }
 
+function dibujarCompleto (pincel){
+        generarHorca(pincel);
+        generarCabeza(pincel);
+        generarCuerpo(pincel);
+        generarBrazoIzq(pincel);
+        generarBrazoDer(pincel);
+        generarPieIzq(pincel);
+        generarPieDer(pincel);
+}
+
 function generarBase(pincel){
     var base = new Image();
     base.src = "Imagenes/base.png";
